@@ -20,6 +20,12 @@ npm run benchmark
 npm run validate
 ```
 
+## Public preview deployment (Render)
+
+The root `render.yaml` configures a free, read-only demo service. To deploy it, open Render, choose **New → Blueprint**, connect this GitHub repository, and apply the `uafloc-demo` service. Render builds with `npm install`, starts with `npm start`, and checks `/api/health`.
+
+The hosted preview is read-only: visitors can inspect the dashboard and topology, while API writes are rejected. The free service uses an ephemeral filesystem, so its sample data can reset after a restart or redeploy, and it may take about a minute to wake after 15 minutes idle. For persistent, editable shared data, use a paid persistent disk or move state to a managed database and add user authentication before enabling writes.
+
 ## Use the app
 
 - **Run diagnosis:** choose a simulated symptom scenario, inspect the prior fault probabilities and available probes, then step once or run until the stopping rule is reached. Each step shows the observation, updated probabilities, and remaining useful probes.

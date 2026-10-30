@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: uafloc-demo
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: READ_ONLY_DEMO
+        value: "true"
+      - key: DATA_FILE
+        value: /tmp/uafloc-demo-state.json
