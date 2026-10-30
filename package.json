@@ -1,0 +1,9 @@
+{
+  "name": "smart-campus-network-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"dev": "node server/index.js", "server": "node server/index.js", "start": "node server/index.js", "test": "node --test", "benchmark": "node scripts/benchmark.js", "validate": "node scripts/validate-experiments.js"},
+  "dependencies": {},
+  "devDependencies": {}
+}
